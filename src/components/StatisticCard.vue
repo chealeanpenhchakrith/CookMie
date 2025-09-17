@@ -4,7 +4,8 @@
       <h1 class="font-bold">{{ title }}</h1>
       <div class="flex flex-row gap-2.5">
         <div v-html="icon"></div>
-        <h1 class="font-light">+ 531</h1>
+        <h1 class="font-light">{{ counter }}</h1>
+        <h1 v-if="rank">{{ rank }}</h1>
       </div>
     </div>
   </div>
@@ -20,5 +21,13 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  counter: {
+    type: Number,
+    required: true
+  },
+  rank: {
+    type: String,
+    required: true
+  }
 });
 </script>
