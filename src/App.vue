@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-row h-dvh">
-    <left />
-    <middle />
-    <right />
+  <div class="flex flex-row h-dvh divide-x-3 divide-line">
+    <Left />
+    <Middle />
+    <Right />
   </div>
 </template>
 
 <script setup>
-import left from "./components/left.vue";
-import right from "./components/right.vue";
-import middle from "./components/middle.vue";
+import Left from "./components/Left.vue";
+import Right from "./components/Right.vue";
+import Middle from "./components/Middle.vue";
 </script>

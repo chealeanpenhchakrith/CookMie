@@ -1,5 +1,11 @@
 <template>
-  <div class="bg-blue-500 flex-1">
-    <h1>left</h1>
+  <div class="flex flex-1 flex-col items-center">
+    <Header class="mt-15" title="Statistics" :icon="charIcon"/>
+
   </div>
 </template>
+
+<script setup>
+import Header from './Header.vue';
+const charIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14v7"/><path d="M20 10v11"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18v3"/><path d="M8 14v7"/></svg>`
+</script>
