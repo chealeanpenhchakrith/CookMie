@@ -6,19 +6,25 @@
       <h1>{{ score }}</h1>
     </div>
     <div class="mt-10">
-        <img
-          src="/src/assets/cookie.jpg"
-          alt="cookie"
-          width="500"
-          height="500"
-        />
-      </div>
+      <img
+        @click="incrementCookie"
+        src="/src/assets/cookie.jpg"
+        alt="cookie"
+        width="500"
+        height="500"
+      />
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 const charIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie-icon lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>`;
 import Header from "./Header.vue";
 const cookieIcon = `<svg xmlns"http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie-icon lucide-cookie"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>`;
-let score = 218;
+const score = ref(0);
+
+function incrementCookie() {
+  score.value += 1;
+}
 </script>
