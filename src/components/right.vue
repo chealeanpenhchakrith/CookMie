@@ -1,6 +1,10 @@
 <template>
   <div class="flex flex-1 flex-col items-center">
     <Header class="mt-15" title="Boost" :icon="charIcon" />
+    <div class="flex flex-row mt-20 gap-6.5">
+      <button class="border-2">Machines</button>
+      <button class="border-2">Multiplier</button>
+    </div>
   </div>
 </template>
 

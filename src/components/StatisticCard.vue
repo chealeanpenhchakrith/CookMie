@@ -23,11 +23,11 @@ const props = defineProps({
   },
   counter: {
     type: Number,
-    required: true
+    required: true,
   },
   rank: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 </script>
