@@ -1,48 +1,23 @@
 <template>
   <div class="flex flex-1 flex-col items-center">
     <Header class="mt-15" title="Boost" :icon="charIcon" />
-    <div class="flex flex-row mt-20 gap-6.5">
+    <div class="flex flex-row mt-20 gap-6.5 mb-20">
       <button class="border-2" @click="toggle">Machines</button>
       <button class="border-2" @click="toggle">Multiplier</button>
     </div>
-    <div v-if="machinesTab">
-      <Machines
-        class="border-2 mt-10"
-        title="Cursor"
-        bonus="1"
-        cost="10"
-        possession="0"
-      />
-      <Machines
-        class="border-2 mt-10"
-        title="Grandma"
-        bonus="5"
-        cost="30"
-        possession="0"
-      />
-      <Machines
-        class="border-2 mt-10"
-        title="Oven"
-        bonus="10"
-        cost="100"
-        possession="0"
-      />
-      <Machines
-        class="border-2 mt-10"
-        title="Farm"
-        bonus="25"
-        cost="200"
-        possession="0"
-      />
-      <Machines
-        class="border-2 mt-10"
-        title="Factory"
-        bonus="50"
-        cost="500"
-        possession="0"
-      />
+    <div v-if="machinesTab" class="flex flex-col gap-7">
+      <Machines title="Cursor" bonus="1" cost="10" possession="0" />
+      <Machines title="Grandma" bonus="5" cost="30" possession="0" />
+      <Machines title="Oven" bonus="10" cost="100" possession="0" />
+      <Machines title="Farm" bonus="25" cost="200" possession="0" />
+      <Machines title="Factory" bonus="50" cost="500" possession="0" />
     </div>
-    <div v-else></div>
+    <div v-else class="flex flex-col gap-7">
+      <Multiplier multiplier="2" cost="100" possession="0" />
+      <Multiplier multiplier="3" cost="500" possession="0" />
+      <Multiplier multiplier="5" cost="2000" possession="0" />
+      <Multiplier multiplier="10" cost="10 000" possession="0" />
+    </div>
   </div>
 </template>
 
@@ -55,4 +30,5 @@ function toggle() {
 }
 import Header from "./Header.vue";
 import Machines from "./Machines.vue";
+import Multiplier from "./Multiplier.vue";
 </script>

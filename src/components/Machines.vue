@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row">
+  <div class="flex flex-row border-2">
     <div>
       <img src="../assets/bonus.png" alt="bonus" width="90" height="90" />
     </div>
