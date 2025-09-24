@@ -43,10 +43,30 @@
       />
     </div>
     <div v-else class="flex flex-col gap-7">
-      <Multiplier multiplier="2" cost="100" possession="0" />
-      <Multiplier multiplier="3" cost="500" possession="0" />
-      <Multiplier multiplier="5" cost="2000" possession="0" />
-      <Multiplier multiplier="10" cost="10 000" possession="0" />
+      <Multiplier
+        @click="store.cookieMultiplier(2)"
+        multiplier="2"
+        cost="100"
+        possession="0"
+      />
+      <Multiplier
+        @click="store.cookieMultiplier(3)"
+        multiplier="3"
+        cost="500"
+        possession="0"
+      />
+      <Multiplier
+        @click="store.cookieMultiplier(5)"
+        multiplier="5"
+        cost="2000"
+        possession="0"
+      />
+      <Multiplier
+        @click="store.cookieMultiplier(10)"
+        multiplier="10"
+        cost="10 000"
+        possession="0"
+      />
     </div>
   </div>
 </template>
