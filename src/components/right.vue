@@ -90,31 +90,31 @@ function toggle() {
 
 function cursorBonus() {
   setInterval(() => {
-    store.cookieProduced += 1;
+    store.cookieProduced += 1 * store.multiplierBonus;
   }, 1000);
 }
 
 function grandmaBonus() {
   setInterval(() => {
-    store.cookieProduced += 5;
+    store.cookieProduced += 5 * store.multiplierBonus;
   }, 1000);
 }
 
 function ovenBonus() {
   setInterval(() => {
-    store.cookieProduced += 10;
+    store.cookieProduced += 10 * store.multiplierBonus;
   }, 1000);
 }
 
 function farmBonus() {
   setInterval(() => {
-    store.cookieProduced += 25;
+    store.cookieProduced += 25 * store.multiplierBonus;
   }, 1000);
 }
 
 function factoryBonus() {
   setInterval(() => {
-    store.cookieProduced += 50;
+    store.cookieProduced += 50 * store.multiplierBonus;
   }, 1000);
 }
 </script>

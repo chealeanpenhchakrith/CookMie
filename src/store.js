@@ -9,5 +9,5 @@ export const useStore = defineStore("main", () => {
   function cookieIncrement() {
     cookieProduced.value += 1 * multiplierBonus.value;
   }
-  return { cookieProduced, cookieMultiplier, cookieIncrement };
+  return { cookieProduced, cookieMultiplier, cookieIncrement, multiplierBonus };
 });
