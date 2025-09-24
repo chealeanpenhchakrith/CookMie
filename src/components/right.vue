@@ -69,25 +69,47 @@
     </div>
     <div v-else class="flex flex-col gap-7">
       <Multiplier
-        @click="store.cookieMultiplier(2)"
+        @click="store.cookieProduced >= 100 ? store.cookieMultiplier(2) : null"
+        :class="
+          store.cookieProduced >= 100
+            ? 'bg-green-500'
+            : 'bg-red-600 cursor-not-allowed'
+        "
         multiplier="2"
         cost="100"
         possession="0"
       />
       <Multiplier
-        @click="store.cookieMultiplier(3)"
+        @click="store.cookieProduced >= 500 ? store.cookieMultiplier(3) : null"
+        :class="
+          store.cookieProduced >= 500
+            ? 'bg-green-500'
+            : 'bg-red-600 cursor-not-allowed'
+        "
         multiplier="3"
         cost="500"
         possession="0"
       />
       <Multiplier
-        @click="store.cookieMultiplier(5)"
+        @click="store.cookieProduced >= 2000 ? store.cookieMultiplier(5) : null"
+        :class="
+          store.cookieProduced >= 2000
+            ? 'bg-green-500'
+            : 'bg-red-600 cursor-not-allowed'
+        "
         multiplier="5"
         cost="2000"
         possession="0"
       />
       <Multiplier
-        @click="store.cookieMultiplier(10)"
+        @click="
+          store.cookieProduced >= 10000 ? store.cookieMultiplier(10) : null
+        "
+        :class="
+          store.cookieProduced >= 10000
+            ? 'bg-green-500'
+            : 'bg-red-600 cursor-not-allowed'
+        "
         multiplier="10"
         cost="10 000"
         possession="0"
