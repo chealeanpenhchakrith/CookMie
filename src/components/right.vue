@@ -69,6 +69,7 @@
     </div>
     <div v-else class="flex flex-col gap-7">
       <Multiplier
+        v-if="!store.multiplierCheck2"
         @click="store.cookieProduced >= 100 ? store.cookieMultiplier(2) : null"
         :class="
           store.cookieProduced >= 100
@@ -80,6 +81,7 @@
         possession="0"
       />
       <Multiplier
+        v-if="!store.multiplierCheck3"
         @click="store.cookieProduced >= 500 ? store.cookieMultiplier(3) : null"
         :class="
           store.cookieProduced >= 500
@@ -91,6 +93,7 @@
         possession="0"
       />
       <Multiplier
+        v-if="!store.multiplierCheck5"
         @click="store.cookieProduced >= 2000 ? store.cookieMultiplier(5) : null"
         :class="
           store.cookieProduced >= 2000
@@ -102,6 +105,7 @@
         possession="0"
       />
       <Multiplier
+        v-if="!store.multiplierCheck10"
         @click="
           store.cookieProduced >= 10000 ? store.cookieMultiplier(10) : null
         "
