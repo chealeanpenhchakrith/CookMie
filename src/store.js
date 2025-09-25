@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 import { watch } from "vue";
 export const useStore = defineStore("main", () => {
+  const totalCookieProduced = ref(0);
   const cookieProduced = ref(0);
   const multiplierBonus = ref(1);
   const multiplierCheck2 = ref(false);
@@ -49,6 +50,7 @@ export const useStore = defineStore("main", () => {
   }
   function cookieIncrement() {
     cookieProduced.value += 1 * multiplierBonus.value;
+    totalCookieProduced.value += 1 * multiplierBonus.value;
   }
   return {
     cookieProduced,
@@ -62,5 +64,6 @@ export const useStore = defineStore("main", () => {
     averageCookie,
     displayAverageCookie,
     currentRank,
+    totalCookieProduced,
   };
 });

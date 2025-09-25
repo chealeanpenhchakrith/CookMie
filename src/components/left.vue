@@ -11,7 +11,7 @@
       class="mt-10"
       title="Cookies Produced"
       :icon="cookieIcon"
-      :counter="store.cookieProduced"
+      :counter="store.totalCookieProduced"
     />
     <StatisticCard
       class="mt-10"
