@@ -1,12 +1,18 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
+import { watch } from "vue";
 export const useStore = defineStore("main", () => {
-  const cookieProduced = ref(10000);
+  const cookieProduced = ref(0);
   const multiplierBonus = ref(1);
   const multiplierCheck2 = ref(false);
   const multiplierCheck3 = ref(false);
   const multiplierCheck5 = ref(false);
   const multiplierCheck10 = ref(false);
+  const averageCookie = ref(0);
+  const displayAverageCookie = ref(0);
+  watch(averageCookie, (newAverageCookie) => {
+    displayAverageCookie.value = newAverageCookie * 60;
+  });
   function cookieMultiplier(multiplier) {
     multiplierBonus.value = multiplier;
     switch (multiplier) {
@@ -40,5 +46,7 @@ export const useStore = defineStore("main", () => {
     multiplierCheck3,
     multiplierCheck5,
     multiplierCheck10,
+    averageCookie,
+    displayAverageCookie,
   };
 });

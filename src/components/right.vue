@@ -139,6 +139,7 @@ function toggle() {
 }
 
 function cursorBonus() {
+  store.averageCookie += 1;
   store.cookieProduced -= 10;
   setInterval(() => {
     store.cookieProduced += 1 * store.multiplierBonus;

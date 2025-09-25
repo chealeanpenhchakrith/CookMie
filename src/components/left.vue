@@ -5,7 +5,7 @@
       class="mt-30"
       title="Average Per Minute"
       :icon="cookieIcon"
-      counter="+15"
+      :counter="store.displayAverageCookie"
     />
     <StatisticCard
       class="mt-10"
