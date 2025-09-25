@@ -147,6 +147,7 @@ function cursorBonus() {
 }
 
 function grandmaBonus() {
+  store.averageCookie += 5;
   store.cookieProduced -= 30;
   setInterval(() => {
     store.cookieProduced += 5 * store.multiplierBonus;
@@ -154,6 +155,7 @@ function grandmaBonus() {
 }
 
 function ovenBonus() {
+  store.averageCookie += 10;
   store.cookieProduced -= 100;
   setInterval(() => {
     store.cookieProduced += 10 * store.multiplierBonus;
@@ -161,6 +163,7 @@ function ovenBonus() {
 }
 
 function farmBonus() {
+  store.averageCookie += 25;
   store.cookieProduced -= 200;
   setInterval(() => {
     store.cookieProduced += 25 * store.multiplierBonus;
@@ -168,6 +171,7 @@ function farmBonus() {
 }
 
 function factoryBonus() {
+  store.averageCookie += 50;
   store.cookieProduced -= 500;
   setInterval(() => {
     store.cookieProduced += 50 * store.multiplierBonus;

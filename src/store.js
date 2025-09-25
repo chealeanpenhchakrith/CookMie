@@ -13,6 +13,11 @@ export const useStore = defineStore("main", () => {
   watch(averageCookie, (newAverageCookie) => {
     displayAverageCookie.value = newAverageCookie * 60;
   });
+
+  watch(multiplierBonus, (newMultiplier) => {
+    averageCookie.value = averageCookie.value * newMultiplier;
+  });
+
   function cookieMultiplier(multiplier) {
     multiplierBonus.value = multiplier;
     switch (multiplier) {
