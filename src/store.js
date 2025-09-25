@@ -10,6 +10,14 @@ export const useStore = defineStore("main", () => {
   const multiplierCheck10 = ref(false);
   const averageCookie = ref(0);
   const displayAverageCookie = ref(0);
+  const currentRank = ref("Novice Baker");
+  watch(cookieProduced, (updateCookieProduced) => {
+    if (updateCookieProduced >= 100 && updateCookieProduced < 500) {
+      currentRank.value = "Cookie Enthusiast";
+    } else if (updateCookieProduced >= 500 && updateCookieProduced <= 1000) {
+      currentRank.value = "Pastry Chef";
+    }
+  });
   watch(averageCookie, (newAverageCookie) => {
     displayAverageCookie.value = newAverageCookie * 60;
   });
@@ -53,5 +61,6 @@ export const useStore = defineStore("main", () => {
     multiplierCheck10,
     averageCookie,
     displayAverageCookie,
+    currentRank,
   };
 });
