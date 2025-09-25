@@ -12,7 +12,7 @@ export const useStore = defineStore("main", () => {
   const averageCookie = ref(0);
   const displayAverageCookie = ref(0);
   const currentRank = ref("Novice Baker");
-  watch(cookieProduced, (updateCookieProduced) => {
+  watch(totalCookieProduced, (updateCookieProduced) => {
     if (updateCookieProduced >= 100 && updateCookieProduced < 500) {
       currentRank.value = "Cookie Enthusiast";
     } else if (updateCookieProduced >= 500 && updateCookieProduced <= 1000) {
