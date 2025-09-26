@@ -24,15 +24,15 @@ const props = defineProps({
     required: true,
   },
   bonus: {
-    type: Number,
+    type: String,
     required: true,
   },
   cost: {
-    type: Number,
+    type: String,
     required: true,
   },
   possession: {
-    type: Number,
+    type: String,
     required: true,
   },
 });
