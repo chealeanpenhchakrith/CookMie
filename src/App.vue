@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row h-dvh divide-x-3 divide-line bg-[#f8efd7]">
+  <div
+    class="flex flex-row h-dvh text-[#632e13] divide-x-5 divide-dashed bg-[#f8efd7]"
+  >
     <Left />
     <Middle />
     <Right />

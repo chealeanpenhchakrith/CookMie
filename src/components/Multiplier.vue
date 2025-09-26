@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-row gap-4">
-    <div>
+  <div class="flex flex-row gap-4 w-80 h-35 items-center rounded-2xl">
+    <div class="pl-6">
       <img
         :src="image"
         alt="multiplier"
@@ -11,7 +11,7 @@
     </div>
     <div class="flex flex-row">
       <div class="flex flex-col gap-3">
-        <div class="flex flex-row text-2xl text-white mt-1">
+        <div class="flex flex-row text-2xl text-white font-bold mt-1">
           <h1>{{ multiplier }} Multiplier</h1>
         </div>
         <div class="flex flex-row text-xl text-white items-center gap-1">
