@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#b36300] rounded-2xl text-white w-80 flex justify-center py-7"
+    class="bg-[#b36300] rounded-2xl text-white w-70 flex justify-center py-6"
   >
     <div class="flex flex-col gap-6">
       <h1 class="font-bold text-2xl underline underline-offset-5">
