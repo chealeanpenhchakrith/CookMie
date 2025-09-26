@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-row gap-x-3.5">
-    <!-- <div v-html="icon"></div> -->
+  <div class="flex flex-row gap-x-3.5 items-center">
+    <div v-html="icon"></div>
     <h1 class="text-7xl">{{ title }}</h1>
   </div>
 </template>

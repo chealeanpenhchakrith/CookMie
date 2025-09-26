@@ -1,5 +1,7 @@
 <template>
-  <div class="bg-[#4e3518] rounded-xl text-white w-80 flex justify-center py-7">
+  <div
+    class="bg-[#b36300] rounded-2xl text-white w-80 flex justify-center py-7"
+  >
     <div class="flex flex-col gap-6">
       <h1 class="font-bold text-2xl underline underline-offset-5">
         {{ title }}
