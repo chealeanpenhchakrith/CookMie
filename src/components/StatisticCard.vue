@@ -1,11 +1,13 @@
 <template>
-  <div class="bg-[#4e3518] px-10 py-5 rounded-xl text-white">
-    <div class="flex flex-col gap-2">
-      <h1 class="font-bold">{{ title }}</h1>
-      <div class="flex flex-row gap-2.5">
+  <div class="bg-[#4e3518] rounded-xl text-white w-80 flex justify-center py-7">
+    <div class="flex flex-col gap-6">
+      <h1 class="font-bold text-2xl underline underline-offset-5">
+        {{ title }}
+      </h1>
+      <div class="flex flex-row gap-2.5 items-center">
         <div v-html="icon"></div>
-        <h1 class="font-light">{{ counter }}</h1>
-        <h1 v-if="rank">{{ rank }}</h1>
+        <h1 class="text-xl">{{ counter }}</h1>
+        <h1 v-if="rank" class="text-xl">{{ rank }}</h1>
       </div>
     </div>
   </div>
