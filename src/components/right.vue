@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-1 flex-col items-center">
     <Header class="mt-15" title="Boost" :icon="charIcon" />
-    <div class="flex flex-row gap-6.5 mt-40 mb-20">
+    <div class="flex flex-row gap-6.5 mt-30 mb-20">
       <button
         :class="
           machinesTab
-            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white'
-            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
         "
         @click="toogleMachines"
       >
@@ -15,8 +15,8 @@
       <button
         :class="
           multiplierTab
-            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white'
-            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
         "
         @click="toogleMultiplier"
       >
