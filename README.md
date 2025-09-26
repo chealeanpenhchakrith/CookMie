@@ -1,6 +1,6 @@
 # Cookie-Clicker (Cook'mie)
 
-Small Vue 3 cookie clicker game inspired by studio ghibli style and built with Vite + Tailwind. Click the cookie to produce cookies, buy machines/upgrades on the right to increase cookies per second.
+Small Vue 3 cookie clicker game inspired by studio ghibli style and built with Vite + Tailwind. Click the cookie to produce cookies, buy machines/upgrades on the right to increase cookies per second. Try your best to hit the last rank of the game : Pastry Chef.
 
 ## Features
 - Clickable cookie (canvas hit-test to ignore transparent pixels)
