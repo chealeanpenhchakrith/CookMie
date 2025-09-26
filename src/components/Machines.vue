@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row gap-2">
+  <div class="flex flex-row gap-4">
     <div>
       <img
         :src="props.image"
@@ -9,7 +9,6 @@
         class="rounded-[11px]"
       />
     </div>
-    <div class="flex gap-2"></div>
     <div class="flex flex-col gap-3">
       <h2 class="text-2xl text-white mt-1">{{ title }}</h2>
       <div class="flex flex-row items-center gap-4">
@@ -19,9 +18,6 @@
           <h3 class="text-xl text-white">{{ cost }}</h3>
         </div>
       </div>
-    </div>
-    <div>
-      <h1>{{ possession }}</h1>
     </div>
   </div>
 </template>
@@ -37,10 +33,6 @@ const props = defineProps({
     required: true,
   },
   cost: {
-    type: String,
-    required: true,
-  },
-  possession: {
     type: String,
     required: true,
   },

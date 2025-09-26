@@ -1,19 +1,24 @@
 <template>
-  <div class="flex flex-row">
+  <div class="flex flex-row gap-4">
     <div>
-      <img :src="image" alt="multiplier" width="90" height="90" />
+      <img
+        :src="image"
+        alt="multiplier"
+        width="90"
+        height="90"
+        class="rounded-[11px]"
+      />
     </div>
-    <div class="flex flex-col">
-      <div class="flex flex-row">
-        <h1>{{ multiplier }} Multiplier</h1>
+    <div class="flex flex-row">
+      <div class="flex flex-col gap-3">
+        <div class="flex flex-row text-2xl text-white mt-1">
+          <h1>{{ multiplier }} Multiplier</h1>
+        </div>
+        <div class="flex flex-row text-xl text-white items-center gap-1">
+          <div v-html="cookieIcon"></div>
+          <h2 class="text-xl text-white">{{ cost }}</h2>
+        </div>
       </div>
-      <div class="flex flex-row">
-        <div v-html="cookieIcon"></div>
-        <h2>{{ cost }}</h2>
-      </div>
-    </div>
-    <div>
-      <h1>{{ possession }}</h1>
     </div>
   </div>
 </template>
@@ -26,10 +31,6 @@ const props = defineProps({
     required: true,
   },
   cost: {
-    type: String,
-    required: true,
-  },
-  possession: {
     type: String,
     required: true,
   },
