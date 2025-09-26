@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-1 flex-col items-center">
-    <Header class="mt-15" title="Boost" :icon="charIcon" />
-    <div class="flex flex-row gap-6.5 mt-30 mb-20">
+    <!-- <Header class="mt-5" title="Boost" :icon="charIcon" /> -->
+    <div class="flex flex-row gap-6.5 mt-24 mb-8">
       <button
         :class="
           machinesTab
-            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
-            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
+            ? 'rounded-2xl px-5.5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5.5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
         "
         @click="toogleMachines"
       >
@@ -15,8 +15,8 @@
       <button
         :class="
           multiplierTab
-            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
-            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
+            ? 'rounded-2xl px-5.5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5.5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-pointer'
         "
         @click="toogleMultiplier"
       >
@@ -28,8 +28,8 @@
         @click="store.cookieProduced >= 10 ? cursorBonus() : null"
         :class="
           store.cookieProduced >= 10
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         title="Cursor"
         bonus="1"
@@ -41,8 +41,8 @@
         @click="store.cookieProduced >= 30 ? grandmaBonus() : null"
         :class="
           store.cookieProduced >= 30
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         title="Grandma"
         bonus="5"
@@ -54,8 +54,8 @@
         @click="store.cookieProduced >= 100 ? ovenBonus() : null"
         :class="
           store.cookieProduced >= 100
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         title="Oven"
         bonus="10"
@@ -67,8 +67,8 @@
         @click="store.cookieProduced >= 200 ? farmBonus() : null"
         :class="
           store.cookieProduced >= 200
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         title="Farm"
         bonus="25"
@@ -80,8 +80,8 @@
         @click="store.cookieProduced >= 500 ? factoryBonus() : null"
         :class="
           store.cookieProduced >= 500
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         title="Factory"
         bonus="50"
@@ -96,36 +96,39 @@
         @click="store.cookieProduced >= 100 ? store.cookieMultiplier(2) : null"
         :class="
           store.cookieProduced >= 100
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         multiplier="2"
         cost="100"
         possession="0"
+        :image="x2multiplierImg"
       />
       <Multiplier
         v-if="!store.multiplierCheck3"
         @click="store.cookieProduced >= 500 ? store.cookieMultiplier(3) : null"
         :class="
           store.cookieProduced >= 500
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         multiplier="3"
         cost="500"
         possession="0"
+        :image="x3multiplierImg"
       />
       <Multiplier
         v-if="!store.multiplierCheck5"
         @click="store.cookieProduced >= 2000 ? store.cookieMultiplier(5) : null"
         :class="
           store.cookieProduced >= 2000
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         multiplier="5"
         cost="2000"
         possession="0"
+        :image="x5multiplierImg"
       />
       <Multiplier
         v-if="!store.multiplierCheck10"
@@ -134,12 +137,13 @@
         "
         :class="
           store.cookieProduced >= 10000
-            ? 'bg-green-500'
-            : 'bg-red-600 cursor-not-allowed'
+            ? 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#b36300] text-white cursor-pointer'
+            : 'rounded-2xl px-5 py-5 text-2xl font-bold bg-[#632e13] text-white cursor-not-allowed'
         "
         multiplier="10"
         cost="10 000"
         possession="0"
+        :image="x10multiplierImg"
       />
     </div>
   </div>
@@ -156,6 +160,10 @@ import grandmaImg from "@/assets/grandma.png";
 import ovenImg from "@/assets/oven.png";
 import farmImg from "@/assets/farm.png";
 import factoryImg from "@/assets/factory.png";
+import x2multiplierImg from "@/assets/x2multiplier.png";
+import x3multiplierImg from "@/assets/x3multiplier.png";
+import x5multiplierImg from "@/assets/x5multiplier.png";
+import x10multiplierImg from "@/assets/x10multiplier.png";
 
 const store = useStore();
 const multiplierTab = ref(false);

@@ -1,12 +1,7 @@
 <template>
-  <div class="flex flex-row border-2">
+  <div class="flex flex-row">
     <div>
-      <img
-        src="../assets/multiplier.png"
-        alt="multiplier"
-        width="90"
-        height="90"
-      />
+      <img :src="image" alt="multiplier" width="90" height="90" />
     </div>
     <div class="flex flex-col">
       <div class="flex flex-row">
@@ -35,6 +30,10 @@ const props = defineProps({
     required: true,
   },
   possession: {
+    type: String,
+    required: true,
+  },
+  image: {
     type: String,
     required: true,
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row gap-x-3.5 items-center">
-    <div v-html="icon"></div>
-    <h1 class="text-7xl">{{ title }}</h1>
+    <div class="text-[#632e13]" v-html="icon"></div>
+    <h1 class="text-7xl text-[#632e13]">{{ title }}</h1>
   </div>
 </template>
 
