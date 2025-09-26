@@ -1,29 +1,19 @@
-# .
+# Cookie-Clicker (Cook'mie)
 
-This template should help get you started developing with Vue 3 in Vite.
+Small Vue 3 cookie clicker demo built with Vite + Tailwind. Click the cookie to produce cookies, buy machines/upgrades on the right to increase cookies per second.
 
-## Recommended IDE Setup
+## Features
+- Clickable cookie (canvas hit-test to ignore transparent pixels)
+- Machines (cursor, grandma, oven, farm, factory) that add CPS
+- Multiplier boosts
+- Tailwind-based UI
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+## Quick start (macOS / any Unix)
+- Install
+  ```bash
+  npm install
+  ```
+- Dev server
+  ```bash
+  npm run dev
+  ```
