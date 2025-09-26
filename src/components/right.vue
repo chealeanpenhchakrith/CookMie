@@ -35,6 +35,7 @@
         bonus="1"
         cost="10"
         possession="0"
+        :image="cursorImg"
       />
       <Machines
         @click="store.cookieProduced >= 30 ? grandmaBonus() : null"
@@ -47,6 +48,7 @@
         bonus="5"
         cost="30"
         possession="0"
+        :image="grandmaImg"
       />
       <Machines
         @click="store.cookieProduced >= 100 ? ovenBonus() : null"
@@ -59,6 +61,7 @@
         bonus="10"
         cost="100"
         possession="0"
+        :image="ovenImg"
       />
       <Machines
         @click="store.cookieProduced >= 200 ? farmBonus() : null"
@@ -71,6 +74,7 @@
         bonus="25"
         cost="200"
         possession="0"
+        :image="farmImg"
       />
       <Machines
         @click="store.cookieProduced >= 500 ? factoryBonus() : null"
@@ -83,6 +87,7 @@
         bonus="50"
         cost="500"
         possession="0"
+        :image="factoryImg"
       />
     </div>
     <div v-else class="flex flex-col gap-7">
@@ -146,6 +151,11 @@ import Header from "./Header.vue";
 import Machines from "./Machines.vue";
 import Multiplier from "./Multiplier.vue";
 import { useStore } from "@/store";
+import cursorImg from "@/assets/cursor.png";
+import grandmaImg from "@/assets/grandma.png";
+import ovenImg from "@/assets/oven.png";
+import farmImg from "@/assets/farm.png";
+import factoryImg from "@/assets/factory.png";
 
 const store = useStore();
 const multiplierTab = ref(false);

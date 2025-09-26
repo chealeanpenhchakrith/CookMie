@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row border-2">
     <div>
-      <img src="../assets/bonus.png" alt="bonus" width="90" height="90" />
+      <img :src="props.image" alt="bonus" width="90" height="90" />
     </div>
     <div class="flex flex-col">
       <h2>{{ title }}</h2>
@@ -32,6 +32,10 @@ const props = defineProps({
     required: true,
   },
   possession: {
+    type: String,
+    required: true,
+  },
+  image: {
     type: String,
     required: true,
   },
