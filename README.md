@@ -17,3 +17,7 @@ Small Vue 3 cookie clicker demo built with Vite + Tailwind. Click the cookie to 
   ```bash
   npm run dev
   ```
+## Overview
+<img width="1780" height="1069" alt="Screenshot 2025-09-26 at 6 03 12 PM" src="https://github.com/user-attachments/assets/492f9977-1653-454a-b551-a0a4fc0c6b23" />
+
+<img width="1779" height="1068" alt="Screenshot 2025-09-26 at 6 04 40 PM" src="https://github.com/user-attachments/assets/4bb814f2-28ba-464a-b6c1-c2d28f1c1bee" />
