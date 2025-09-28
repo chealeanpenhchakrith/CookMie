@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import Left from "./components/left.vue";
+import Left from "./components/Left.vue";
 import Right from "./components/Right.vue";
 import Middle from "./components/Middle.vue";
 </script>
