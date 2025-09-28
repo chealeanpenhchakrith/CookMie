@@ -2,7 +2,7 @@
   <div
     class="flex flex-row h-dvh text-[#632e13] divide-x-5 divide-line bg-[#f8efd7]"
   >
-    <Left />
+    <left />
     <Middle />
     <Right />
   </div>
